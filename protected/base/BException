@@ -1,0 +1,8 @@
+<?php
+/**
+ * BException class file.
+ */
+class BException extends Exception
+{
+}
+

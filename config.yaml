@@ -1,0 +1,9 @@
+name: chuiniu
+version: 1
+
+handle:
+- rewrite: if(is_file( ) && path ~ "/public/(.*)") goto "/public/$1"
+- rewrite: if( !is_dir() && !is_file() && path !~ "/public/(.*)" ) goto "index.php?%{QUERY_STRING}"
+
+- hostaccess: if( path ~ "/protected/" ) allow "0.0.0.0"
+
